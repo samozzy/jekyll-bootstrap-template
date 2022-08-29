@@ -9,7 +9,7 @@ on:
 
 jobs: 
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       ### PREP ###
       - name: Checkout repo
@@ -21,7 +21,7 @@ jobs:
       - name: Install Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.3
+          ruby-version: 2.7
       - name: Cache Ruby gems
         id: cache-gems
         uses: actions/cache@v2
@@ -58,7 +58,7 @@ jobs:
       ### DEPLOY ###
       # Uncomment this for your repository.
       # - name: Publish to GH Pages 🚀
-      #   uses: JamesIves/github-pages-deploy-action@4.0.0
+      #   uses: JamesIves/github-pages-deploy-action@4.4.0
       #   with:
       #     branch: gh-pages # The branch the action should deploy to.
       #     folder: _site # The folder the action should deploy.
